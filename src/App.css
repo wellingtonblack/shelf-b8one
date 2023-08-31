@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.App {
+  font-family: 'Inter', sans-serif;
+  padding: 0 40px;
+  margin: 120px 0;
+}
+img {
+  max-width: 100%;
+}
+
+.list-cards {
+  display: flex;
+  gap: 15px;
+  max-width: 1600px;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-product {
+  max-width: 240px;
+  padding: 32px;
+  box-shadow: 0 0 7px 0px #cdc8c8;
+  border-radius: 8px;
+  position: relative;
+}
+
+.card-product .product-image {
+  margin-bottom: 10px;
+}
+
+.detail-product .product-name {
+
+  color: #1C1C1C;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 25px 0;
+}
+
+.detail-product .product-price {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 30px;
+}
+
+.detail-product .product-price .list-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: #999A9B;
+  text-decoration: line-through;
+}
+
+.detail-product .product-price .best-price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #F3151B;
+}
+
+.detail-product .product-price .installments {
+  font-size: 12px;
+  color: #737375;
+}
+
+.detail-product .product-price .installments .number-installment {
+  color: #1c1c1c;
+  font-weight: 600;
+}
+
+.card-product .product-link {
+  text-decoration: none;
+}
+
+.wishlist {
+  cursor: pointer;
+  background: #f2f3f6;
+  padding: 10px;
+  border-radius: 30px;
+  position: absolute;
+  right: 35px;
+  line-height: 14px;
+  transition: all ease-in-out .2s;
+}
+
+.wishlist.active {
+  background: #F3151B;
+}
+
+.card-product:hover .wishlist.active {
+  background:
+    #E20F15;
+}
+
+.status-products {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.card-product:hover .wishlist  {
+  background:  #FFCAE0;
+}
+.card-product:hover .wishlist.inactive img{
+  content: url(./assets/heart-red.svg);
+}
+
+
+/* button */
+.card-product .add-to-cart {
+  font-family: 'Inter', sans-serif;
+  border: 0;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all ease-in-out .2s;
+}
+
+.card-product .add-to-cart.default {
+  background: #40B25C;
+}
+
+.card-product .add-to-cart.hover {
+  background: #1E9631;
+}
+
+.card-product .add-to-cart.active {
+  background: #A3F9B9;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  color: #1c1c1c;
+}
+
+.card-product:hover .add-to-cart.default {
+  background: #1E9631;
+} 
+
+.card-product:hover .add-to-cart.active {
+  background: #40B25C;
+  color: #fff;
+}
+.card-product:hover .add-to-cart.active img {
+  display: none;
+}
